@@ -1,0 +1,19 @@
+///////Items 
+
+
+Switch Mailbox "Post [%s]" [ "enheder" ] 
+String Mailbox_voltage "Post spænding [%s]" 
+
+
+///////Rules
+
+//mailbox
+        rule "Mailbox Sensor"
+        when
+           Item Mailbox changed to ON
+        then
+               //if(SecuritySystem.state == ON)
+               //{
+                   sendBroadcastNotification("POST!!")
+               //}
+        end
